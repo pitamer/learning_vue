@@ -17,7 +17,10 @@
         </div>
         <br>
         <ul>
-            <span v-for="todo in todos" v-on:click="toggleTodo(todo)">
+            <span
+                v-for="todo in todos"
+                v-on:click="toggleTodo(todo)"
+            >
                 <li v-if="!todo.done" class="todo">
                     {{ todo.text }}
                 </li>
@@ -26,6 +29,22 @@
                 </li>
             </span>
         </ul>
+        <div class="new-todo-container">
+            <form>
+                <input
+                    type="text"
+                    class="new-todo-input"
+                    v-model="newTodoInput"
+                >
+                <button
+                    type="submit"
+                    class="new-todo-button"
+                    v-on:click="addTodo(newTodoInput, $event)"
+                >
+                    Add!
+                </button>
+            </form>
+        </div>
     </div>
 
     <script src="index.js"></script>

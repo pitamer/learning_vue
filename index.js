@@ -21,11 +21,20 @@ app = new Vue({
         done: false,
       },
     ],
+    newTodoInput: "",
   },
   methods: {
-    toggleTodo: todo => {
-        todo.done = !todo.done;
-        console.log(`${todo.text} is now ${todo.done}`);
-    }
+    toggleTodo: (todo) => {
+      todo.done = !todo.done;
+    },
+    addTodo: (newTodoInput, event) => {
+      event.preventDefault();
+      todo = {
+        text: newTodoInput,
+        done: false,
+      };
+      app.todos.push(todo);
+      app.newTodoInput = "";
+    },
   },
 });
