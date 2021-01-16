@@ -1,47 +1,31 @@
 app = new Vue({
   el: "#app",
   data: {
-    my_message: "A message that I have written",
-    spans: [
+    title: "A TODOs app",
+    subTitle: "'cause I'm feeling creative today",
+    todos: [
       {
-        name: "span 1",
-        visible: true,
-        color: "blue",
+        text: "Take hugsy for a walk",
+        done: false,
       },
       {
-        name: "span 2",
-        visible: true,
-        color: "purple",
+        text: "Watch an episode of Silicon Valley",
+        done: false,
       },
       {
-        name: "span 3",
-        visible: true,
-        color: "red",
+        text: "Answer the reserve army service mail",
+        done: false,
       },
       {
-        name: "span 4",
-        visible: true,
-        color: "yellow",
-      },
-      {
-        name: "span 5",
-        visible: true,
-        color: "green",
+        text: "Meditate for 15 minutes",
+        done: false,
       },
     ],
   },
+  methods: {
+    toggleTodo: todo => {
+        todo.done = !todo.done;
+        console.log(`${todo.text} is now ${todo.done}`);
+    }
+  },
 });
-
-setInterval(
-    () => {
-        app.spans.forEach(span => {
-            setTimeout(() => {
-                span.visible = false
-            },
-            1000 + 200*app.spans.indexOf(span))
-            span.visible = true;
-            span.name += ' |'
-        })
-    },
-    2000
-)

@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Fraunces' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Document</title>
 </head>
 <body>
     
-        <div id="app">
-            {{ my_message }}
-            <br><br>
-            <span v-for="span in spans">
-                <span v-if="span.visible">
-                    {{ span.name }}
-                </span>
-                <br>
-            </span>
+    <div id="app">
+        <div class="title">
+            <h1>{{ title }}</h1>
+            <h5>{{ subTitle }}</h5>
         </div>
+        <br>
+        <ul>
+            <span v-for="todo in todos" v-on:click="toggleTodo(todo)">
+                <li v-if="!todo.done" class="todo">
+                    {{ todo.text }}
+                </li>
+                <li v-else class="todo done">
+                    {{ todo.text }}
+                </li>
+            </span>
+        </ul>
+    </div>
 
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

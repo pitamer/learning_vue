@@ -1,0 +1,39 @@
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+#app {
+    font-family: 'Fraunces';
+    max-width: 500px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title::after {
+    content: "--------------------------------------------------------";
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.todo {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.5em;
+    margin: 1em 0em 1em;
+    cursor: pointer;
+    background-color: rgba(254, 255, 181, 0.486);
+}
+
+.done {
+    color: red;
+    background-color: rgba(181, 255, 200, 0.486);
+    color: grey;
+    text-decoration: line-through;
+}
