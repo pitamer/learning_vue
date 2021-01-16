@@ -1,39 +1,59 @@
-
 body {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 #app {
-    font-family: 'Fraunces';
-    max-width: 500px;
+  font-family: "Fraunces";
+  max-width: 500px;
 }
 
 .title {
-    text-align: center;
+  text-align: center;
 }
 
 .title::after {
-    content: "--------------------------------------------------------";
+  content: "--------------------------------------------------------";
 }
 
 ul {
-    list-style: none;
-    padding-left: 0px;
+  list-style: none;
+  padding-left: 0px;
 }
 
 .todo {
-    border: 1px solid black;
-    border-radius: 4px;
-    padding: 0.5em;
-    margin: 1em 0em 1em;
-    cursor: pointer;
-    background-color: rgba(254, 255, 181, 0.486);
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin: 1em 0em 1em;
+  cursor: pointer;
+  background-color: rgba(254, 255, 181, 0.486);
 }
 
 .done {
-    color: red;
-    background-color: rgba(181, 255, 200, 0.486);
-    color: grey;
-    text-decoration: line-through;
+  color: red;
+  background-color: rgba(181, 255, 200, 0.486);
+  color: grey;
+  text-decoration: line-through;
+}
+
+.new-todo-form {
+  margin-top: 2em;
+}
+
+.new-todo-input {
+  width: 70%;
+  height: 2.65em;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.new-todo-button {
+  width: 26%;
+  height: 3em;
+  position: relative;
+  bottom: 0px;
+  background-color: rgba(0, 195, 255, 0.349);
+  border: 1px solid;
+  border-radius: 5px;
 }

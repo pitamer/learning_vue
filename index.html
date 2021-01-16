@@ -30,7 +30,7 @@
             </span>
         </ul>
         <div class="new-todo-container">
-            <form>
+            <form v-on:submit.prevent class="new-todo-form">
                 <input
                     type="text"
                     class="new-todo-input"
@@ -39,7 +39,7 @@
                 <button
                     type="submit"
                     class="new-todo-button"
-                    v-on:click="addTodo(newTodoInput, $event)"
+                    v-on:click="addTodo(newTodoInput)"
                 >
                     Add!
                 </button>

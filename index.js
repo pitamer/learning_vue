@@ -27,8 +27,7 @@ app = new Vue({
     toggleTodo: (todo) => {
       todo.done = !todo.done;
     },
-    addTodo: (newTodoInput, event) => {
-      event.preventDefault();
+    addTodo: (newTodoInput) => {
       todo = {
         text: newTodoInput,
         done: false,
