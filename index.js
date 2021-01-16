@@ -37,8 +37,10 @@ setInterval(
         app.spans.forEach(span => {
             setTimeout(() => {
                 span.visible = false
-            }, 1000 + 200*app.spans.indexOf(span))
-            span.visible = true
+            },
+            1000 + 200*app.spans.indexOf(span))
+            span.visible = true;
+            span.name += ' |'
         })
     },
     2000

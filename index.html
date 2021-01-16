@@ -12,8 +12,10 @@
         <div id="app">
             {{ my_message }}
             <br><br>
-            <span v-for="span in spans" v-if="span.visible">
-                {{ span.name }}
+            <span v-for="span in spans">
+                <span v-if="span.visible">
+                    {{ span.name }}
+                </span>
                 <br>
             </span>
         </div>
