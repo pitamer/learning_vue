@@ -32,8 +32,12 @@ app = new Vue({
         text: newTodoInput,
         done: false,
       };
-      app.todos.push(todo);
-      app.newTodoInput = "";
+      if (todo.text) {
+        app.todos.push(todo);
+        app.newTodoInput = "";
+      } else {
+        console.log("Nay.");
+      }
     },
   },
 });
