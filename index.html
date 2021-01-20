@@ -11,11 +11,7 @@
 <body>
     
     <div id="app">
-        <div class="title">
-            <h1>{{ title }}</h1>
-            <h5>{{ subTitle }}</h5>
-        </div>
-        <br>
+        <app-title></app-title>
         <ul>
             <todo-item
                 v-for="todo in todos"
@@ -24,22 +20,7 @@
             >
             </todo-item>
         </ul>
-        <div class="new-todo-container">
-            <form v-on:submit.prevent class="new-todo-form">
-                <input
-                    type="text"
-                    class="new-todo-input"
-                    v-model="newTodoInput"
-                >
-                <button
-                    type="submit"
-                    class="new-todo-button"
-                    v-on:click="addTodo(newTodoInput)"
-                >
-                    Add!
-                </button>
-            </form>
-        </div>
+        <new-todo-form></new-todo-form>
     </div>
 
     <script src="index.js"></script>
