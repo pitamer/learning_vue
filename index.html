@@ -17,14 +17,15 @@
         </div>
         <br>
         <ul>
-            <li
-                class="todo"
-                v-bind:class="[{ 'done': done }, todo]"
+            <todo-item
+            
                 v-for="todo in todos"
-                v-on:click="toggleTodo(todo)"
+                v-bind:todo="todo"
+                v-bind:key="todos.indexOf(todo)"
+                
+                v-bind:class="[{ 'done': todo.done }, 'todo']"
             >
-                {{ todo.text }}
-            </li>
+            </todo-item>
         </ul>
         <div class="new-todo-container">
             <form v-on:submit.prevent class="new-todo-form">

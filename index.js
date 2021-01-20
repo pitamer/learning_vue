@@ -1,6 +1,18 @@
 Vue.component("todo-item", {
   props: ["todo"],
-  template: `<li>{{ todo.text }}</li>`,
+  data: () => {
+    return {
+      toggleTodo: (todo) => {
+        todo.done = !todo.done;
+      },
+    };
+  },
+  template: `<li
+                v-bind:class="[{ 'done': todo.done }, 'todo']"
+                v-on:click="toggleTodo(todo)"
+            >
+                {{ todo.text }}
+            </li>`,
 });
 
 app = new Vue({
@@ -29,9 +41,6 @@ app = new Vue({
     newTodoInput: "",
   },
   methods: {
-    toggleTodo: (todo) => {
-      todo.done = !todo.done;
-    },
     addTodo: (newTodoInput) => {
       todo = {
         text: newTodoInput,

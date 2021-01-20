@@ -28,6 +28,7 @@ ul {
   margin: 1em 0em 1em;
   cursor: pointer;
   background-color: rgba(254, 255, 181, 0.486);
+  user-select: none;
 }
 
 .done {
