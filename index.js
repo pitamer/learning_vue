@@ -1,3 +1,8 @@
+Vue.component("todo-item", {
+  props: ["todo"],
+  template: `<li>{{ todo.text }}</li>`,
+});
+
 app = new Vue({
   el: "#app",
   data: {
