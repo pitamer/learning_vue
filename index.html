@@ -18,12 +18,9 @@
         <br>
         <ul>
             <todo-item
-            
                 v-for="todo in todos"
                 v-bind:todo="todo"
                 v-bind:key="todos.indexOf(todo)"
-                
-                v-bind:class="[{ 'done': todo.done }, 'todo']"
             >
             </todo-item>
         </ul>
