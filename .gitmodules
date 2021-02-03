@@ -4,3 +4,6 @@
 [submodule "learning_vue_cli"]
 	path = learning_vue_cli
 	url = https://github.com/pitamer/learning_vue_cli
+[submodule "beautify-with-vuetify"]
+	path = beautify-with-vuetify
+	url = https://github.com/pitamer/beautify-with-vuetify
