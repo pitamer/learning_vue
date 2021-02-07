@@ -7,3 +7,6 @@
 [submodule "beautify-with-vuetify"]
 	path = beautify-with-vuetify
 	url = https://github.com/pitamer/beautify-with-vuetify
+[submodule "Vue-3-Forms"]
+	path = Vue-3-Forms
+	url = https://github.com/pitamer/Vue-3-Forms
