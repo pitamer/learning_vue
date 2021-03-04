@@ -10,3 +10,6 @@
 [submodule "Vue-3-Forms"]
 	path = Vue-3-Forms
 	url = https://github.com/pitamer/Vue-3-Forms
+[submodule "Real-World-Vue-3-TypeScript"]
+	path = Real-World-Vue-3-TypeScript
+	url = https://github.com/pitamer/Real-World-Vue-3-TypeScript
